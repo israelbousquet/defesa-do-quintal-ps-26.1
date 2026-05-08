@@ -1,0 +1,19 @@
+{
+  "name": "plants-vs-zombies-tabuleiro",
+  "version": "1.0.0",
+  "description": "Adaptação do jogo Ethnos com tema Plants vs. Zombies para terminal",
+  "main": "dist/Main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/Main.ts",
+    "dev": "ts-node src/Main.ts"
+  },
+  "keywords": ["plants-vs-zombies", "ethnos", "tabuleiro", "typescript"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.2"
+  }
+}
