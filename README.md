@@ -1,36 +1,36 @@
-# Defesa do Quintal - Plants vs. Zombies
+# 🌿 Defesa do Quintal - Plants vs. Zombies
 
-Projeto academico desenvolvido na disciplina Projeto de Software.
+Projeto acadêmico desenvolvido na disciplina Projeto de Software.
 
-Defesa do Quintal e um jogo de terminal inspirado em Ethnos, com tema Plants vs. Zombies. A ideia do projeto e disputar o dominio de canteiros do gramado ao longo de 3 eras, usando cartas, esquadroes e poderes especiais de plantas.
+Defesa do Quintal é um jogo de terminal inspirado em Ethnos, com tema Plants vs. Zombies. A ideia do projeto é disputar o domínio de canteiros do gramado ao longo de 3 eras, usando cartas, esquadrões e poderes especiais de plantas.
 
-## Visao geral
+## 🗺️ Visão geral
 
-No jogo, cada participante pode comprar cartas ou baixar um esquadrao. Ao baixar um esquadrao, o jogador escolhe um lider, planta uma ficha de defesa no bioma correspondente e ativa o poder da planta escolhida.
+No jogo, cada participante pode comprar cartas ou baixar um esquadrão. Ao baixar um esquadrão, o jogador escolhe um líder, planta uma ficha de defesa no bioma correspondente e ativa o poder da planta escolhida.
 
 Os poderes das plantas ajudam a mudar o ritmo da partida:
 
-- Girassol compra uma carta extra.
-- Disparervilha planta uma ficha adicional.
-- Noz-Obstaculo permite manter a mao.
-- Cerejeira renova as sementes disponiveis.
-- Planta Carnivora remove uma ficha de um oponente.
+- 🌻 Girassol compra uma carta extra.
+- 🌱 Disparervilha planta uma ficha adicional.
+- 🪨 Noz-Obstáculo permite manter a mão.
+- 🌸 Cerejeira renova as sementes disponíveis.
+- 🪤 Planta Carnívora remove uma ficha de um oponente.
 
-## Tecnologias utilizadas
+## 🛠️ Tecnologias utilizadas
 
 - Node.js
 - TypeScript
 - ts-node
 - PlantUML
 
-## Requisitos
+## 📋 Requisitos
 
 - Node.js 18 ou superior
 - npm instalado
 
-## Como inicializar o projeto
+## 🚀 Como inicializar o projeto
 
-Na raiz do repositorio, instale as dependencias:
+Na raiz do repositório, instale as dependências:
 
 ```bash
 npm install
@@ -42,18 +42,18 @@ Para executar o jogo em modo de desenvolvimento:
 npm run dev
 ```
 
-Tambem e possivel iniciar com:
+Também é possível iniciar com:
 
 ```bash
 npm start
 ```
 
-Para gerar a compilacao TypeScript:
+Para gerar a compilação TypeScript:
 
 ```bash
 npm run build
 ```
 
-## Tema do projeto
+## 🎨 Tema do projeto
 
-Defesa do Quintal usa o universo de Plants vs. Zombies como identidade visual e conceitual do jogo. Os biomas, as plantas e os poderes foram adaptados para um contexto de jogo de cartas e controle de territorio em terminal.
+Defesa do Quintal usa o universo de Plants vs. Zombies como identidade visual e conceitual do jogo. Os biomas, as plantas e os poderes foram adaptados para um contexto de jogo de cartas e controle de território em terminal.
