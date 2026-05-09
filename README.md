@@ -23,6 +23,8 @@ Os poderes das plantas ajudam a mudar o ritmo da partida:
 - ts-node
 - PlantUML
 
+alteracao
+
 ## 📋 Requisitos
 
 - Node.js 18 ou superior
