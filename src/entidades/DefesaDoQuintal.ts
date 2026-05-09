@@ -57,7 +57,7 @@ export class DefesaDoQuintal {
   }
 
   getJogadores(): Jogador[] {
-    return this.jogadores;
+    return [...this.jogadores]
   }
 
   getGramado(): Gramado {
