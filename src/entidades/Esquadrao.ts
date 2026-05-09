@@ -22,6 +22,10 @@ export class Esquadrao {
   }
 
   getLider(): Carta {
+    if (!this.lider) {
+      throw new Error("O esquadrão precisa ter um líder definido.");
+    }
+
     return this.lider;
   }
 

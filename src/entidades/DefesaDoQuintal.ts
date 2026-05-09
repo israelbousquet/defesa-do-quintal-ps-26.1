@@ -57,7 +57,7 @@ export class DefesaDoQuintal {
   }
 
   getJogadores(): Jogador[] {
-    return this.jogadores;
+    return [...this.jogadores]
   }
 
   getGramado(): Gramado {
@@ -137,13 +137,20 @@ export class DefesaDoQuintal {
     }
 
     const jogador = this.getJogadorAtual();
-    const lider = esquadrao.getLider();
+    let lider: Carta;
+
+    try {
+      lider = esquadrao.getLider();
+      jogador.registrarEsquadrao(esquadrao);
+    } catch (error) {
+      const mensagem = error instanceof Error ? error.message : "Falha ao baixar o esquadrão.";
+      console.log(`  ❌ ${mensagem}`);
+      return false;
+    }
+
     const biomaLider = lider.getBioma();
 
     console.log(`  ✅ Esquadrão válido! Líder: ${lider.toString()} | Tamanho: ${esquadrao.getTamanho()}`);
-
-    // Registra o esquadrão e remove as cartas da mão
-    jogador.registrarEsquadrao(esquadrao);
 
     // Planta ficha de defesa no canteiro do bioma do líder
     const jogadorIndice = this.getIndiceJogador(jogador);
