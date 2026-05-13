@@ -48,19 +48,28 @@ export class Canteiro {
     return false;
   }
 
-  // Retorna o índice do jogador com mais fichas. -1 se ninguém tem fichas.
+  // Retorna o índice do jogador com mais fichas. Empates e ausência de fichas retornam -1.
   calcularDominante(): number {
     let maxFichas = 0;
     let dominante = -1;
+    let houveEmpate = false;
 
     for (let i = 0; i < this.fichasPorJogador.length; i++) {
-      if (this.fichasPorJogador[i] > maxFichas) {
-        maxFichas = this.fichasPorJogador[i];
+      const fichasJogador = this.fichasPorJogador[i];
+
+      if (fichasJogador > maxFichas) {
+        maxFichas = fichasJogador;
         dominante = i;
+        houveEmpate = false;
+        continue;
+      }
+
+      if (fichasJogador > 0 && fichasJogador === maxFichas) {
+        houveEmpate = true;
       }
     }
 
-    return dominante;
+    return houveEmpate ? -1 : dominante;
   }
 
   getPontuacaoEra(era: number): number {

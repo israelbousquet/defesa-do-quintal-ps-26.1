@@ -51,9 +51,21 @@ export class Jogador {
 
   // Registra o esquadrão e remove as cartas correspondentes da mão.
   registrarEsquadrao(esquadrao: Esquadrao): void {
+    const cartasDoEsquadrao = esquadrao.getCartas();
+    const cartasDisponiveis = [...this.mao];
+
+    for (const carta of cartasDoEsquadrao) {
+      const indiceCarta = cartasDisponiveis.indexOf(carta);
+      if (indiceCarta === -1) {
+        throw new Error("Todas as cartas do esquadrão precisam estar na mão do jogador.");
+      }
+
+      cartasDisponiveis.splice(indiceCarta, 1);
+    }
+
     this.esquadroesJogados.push(esquadrao);
 
-    for (const carta of esquadrao.getCartas()) {
+    for (const carta of cartasDoEsquadrao) {
       this.removerCartaDaMao(carta);
     }
   }
